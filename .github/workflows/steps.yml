@@ -11,7 +11,7 @@ jobs:
       - name: Checkout Actions
         uses: actions/checkout@v4
       - id: step-caller
-        uses: "/.github/actions/hello"
+        uses: "./.github/actions/hello/"
         with:
           the-caller: 'My-self'
       - run: echo random-numer ${{ steps.step-caller.outputs.random-number }}
