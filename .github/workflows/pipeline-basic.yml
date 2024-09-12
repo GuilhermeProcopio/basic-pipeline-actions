@@ -1,0 +1,12 @@
+name: basic-pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo command
+      run: echo "Inicial pipeline configuration"
