@@ -1,7 +1,7 @@
 name: steps examples
 
 on: 
-  workflow_dispatch
+  push
 
 jobs:
   hello_world_job:
@@ -11,7 +11,7 @@ jobs:
       - name: Checkout Actions
         uses: actions/checkout@v4
       - id: step-caller
-        uses: "./.github/actions/hello/action.yml"
+        uses: "./.github/actions/hello"
         with:
           the-caller: 'My-self'
       - run: echo random-numer ${{ steps.step-caller.outputs.random-number }}
